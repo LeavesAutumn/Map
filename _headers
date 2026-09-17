@@ -1,0 +1,10 @@
+# Service Worker 与注册脚本禁止缓存，保证更新即时生效
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/registerSW.js
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# 代理接口响应禁止缓存（同时由 Function 输出 JSON）
+/api/*
+  Cache-Control: no-store
